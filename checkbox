@@ -1,0 +1,22 @@
+ Checkbox(
+                                              activeColor: Colors.pink,
+                                              value: checkedList[index],
+                                              onChanged: (bool? value) {
+                                                setState(() {
+                                                  checkedList[index] =
+                                                  value!;
+                                                  if (tempVenueList
+                                                      .contains(
+                                                      data['id'])) {
+                                                    tempVenueList.remove(
+                                                        data['id']);
+                                                  } else {
+                                                    tempVenueList
+                                                        .add(data['id']);
+                                                  }
+                                                });
+                                                print('tempVenueList\n');
+                                                print(tempVenueList
+                                                    .toString());
+                                              },
+                                            ),
